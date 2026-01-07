@@ -1,0 +1,235 @@
+/* styles.css - external stylesheet for Milo Phillips-Brown site */
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfa;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+.hero {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #fcfcfa;
+}
+
+.inner {
+  width: 95%;
+  max-width: 652px; /* increased by 5% from 621px */
+  margin: 0 auto;
+  background-color: #f0f2f7;
+  border-radius: 8px;
+  padding: 40px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M0,30 C50,10 150,50 200,30 L200,60 L0,60 Z' fill='%23fcfcfa'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+.profile {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin: 0 0 1em 1em;
+  shape-outside: circle(50%);
+  -webkit-shape-outside: circle(50%);
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.content {
+  overflow: auto;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin: 0 0 16px;
+  position: relative;
+  display: inline-block;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #000;
+}
+.content h1 .swoosh {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.content h1 .swoosh path {
+  fill: none;
+  stroke: #3cceaf;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.content nav ul {
+  display: flex;
+  gap: 2.25em;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+}
+.content nav ul li a {
+  text-decoration: none;
+  color: #481ac2;
+  font-size: 1.125em;
+  text-transform: lowercase;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+}
+.content nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Active menu item styling */
+.content nav ul li.active a {
+  color: #3cceaf;
+}
+.content nav ul li.active a::after,
+.content nav ul li.active a:hover::after {
+  width: 0 !important;
+}
+
+/* Other menu items underline on hover (instant) */
+.content nav ul li:not(.active) a:hover::after {
+  width: 100%;
+}
+
+.content a.inline-link {
+  color: #481ac2;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.content a.inline-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content a.inline-link:hover::after {
+  width: 100%;
+}
+
+.papers {
+  margin-top: 2em;
+}
+.paper {
+  margin: 0 0 1em;
+}
+.paper-title {
+  margin: 0;
+  color: #481ac2;
+  text-decoration: none;
+  font-weight: 200;
+  position: relative;
+  display: inline-block;
+}
+.paper-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.paper-title:hover::after {
+  width: 100%;
+}
+.paper-meta {
+  font-style: italic;
+  color: #333;
+}
+
+/* Replace list bullets with dashes for all content lists */
+.content > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+.content > ul li {
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+}
+.content > ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+/* Section headings (published / in progress) styling */
+.section-title {
+  font-size: 1em;              /* same as body text */
+  font-weight: 500;            /* slightly less bold */
+  color: #000;
+  text-transform: none;
+  margin-top: 0.75em;          /* less space above */
+  margin-bottom: 0.5em;       /* more space below */
+  position: relative;
+  display: inline-block;
+}
+.section-title .swoosh {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+.section-title .swoosh path {
+  stroke: #3cceaf;             /* aqua accent */
+  stroke-width: 3;
+  fill: none;
+}
+
+/* Align first content block across pages */
+.content > section:first-of-type,
+.content > p:first-of-type {
+  margin-top: 0;
+}
+
+/* Remove extra gap after floated profile image on About */
+.profile + p {
+  margin-top: 0;
+}
+
+/* Reset section-title top margin when it's the first element in .papers */
+.papers > .section-title:first-of-type {
+  margin-top: 0;
+}
