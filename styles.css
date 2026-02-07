@@ -1,7 +1,14 @@
-/* styles.css - external stylesheet for Milo Phillips-Brown site */
+/* styles.css – Milo Phillips-Brown site (mobile-first) */
 
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+/* ── Reset & base ───────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -9,25 +16,30 @@ body {
   background-color: #fcfcfa;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* ── Layout ─────────────────────────────────────────── */
 
 .hero {
   width: 100%;
-  padding: 60px 0;
+  padding: 24px 0;
   background-color: #fcfcfa;
 }
 
 .inner {
-  width: 95%;
-  max-width: 652px; /* increased by 5% from 621px */
+  width: 92%;
+  max-width: 652px;
   margin: 0 auto;
   background-color: #f0f2f7;
   border-radius: 8px;
-  padding: 40px 40px 60px;
+  padding: 24px 20px 60px;
   position: relative;
   overflow: hidden;
 }
 
+/* Wavy bottom edge */
 .inner::after {
   content: "";
   position: absolute;
@@ -41,39 +53,30 @@ body {
   pointer-events: none;
 }
 
-.profile {
-  float: right;
-  width: 200px;
-  height: 200px;
-  margin: 0 0 1em 1em;
-  shape-outside: circle(50%);
-  -webkit-shape-outside: circle(50%);
-  border-radius: 50%;
-  object-fit: cover;
-  transform: scale(0.95);
-  transform-origin: center;
-}
-
 .content {
   overflow: auto;
 }
 
+/* ── Heading ────────────────────────────────────────── */
+
 .content h1 {
-  font-size: 2.5em;
-  margin: 0 0 16px;
+  font-size: 1.75em;
+  margin: 0 0 12px;
   position: relative;
   display: inline-block;
   font-weight: 200;
   line-height: 1.2;
   color: #000;
 }
+
 .content h1 .swoosh {
   position: absolute;
-  bottom: -8px;
+  bottom: -6px;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 16px;
 }
+
 .content h1 .swoosh path {
   fill: none;
   stroke: #3cceaf;
@@ -81,22 +84,29 @@ body {
   stroke-linecap: round;
 }
 
+/* ── Navigation ─────────────────────────────────────── */
+
 .content nav ul {
   display: flex;
-  gap: 2.25em;
+  flex-wrap: wrap;
+  gap: 0.5em 1.25em;
   list-style: none;
   padding: 0;
   margin: 0 0 1.5em;
 }
+
 .content nav ul li a {
   text-decoration: none;
   color: #481ac2;
-  font-size: 1.125em;
+  font-size: 1em;
   text-transform: lowercase;
   font-weight: 400;
   position: relative;
   display: inline-block;
+  white-space: nowrap;
 }
+
+/* Swoosh underline pseudo-element */
 .content nav ul li a::after {
   content: "";
   position: absolute;
@@ -107,9 +117,10 @@ body {
   background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: width 0.2s ease;
 }
 
-/* Active menu item styling */
+/* Active nav item */
 .content nav ul li.active a {
   color: #3cceaf;
 }
@@ -118,93 +129,122 @@ body {
   width: 0 !important;
 }
 
-/* Other menu items underline on hover (instant) */
+/* Hover underline for non-active items */
 .content nav ul li:not(.active) a:hover::after {
   width: 100%;
 }
+
+/* ── Profile image ──────────────────────────────────── */
+
+.profile {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ── Inline links ───────────────────────────────────── */
 
 .content a.inline-link {
   color: #481ac2;
   text-decoration: none;
   position: relative;
-  display: inline-block;
+  display: inline;
 }
+
 .content a.inline-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -2px;
   width: 0;
-  height: 8px;
+  height: 6px;
   background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: width 0.2s ease;
 }
+
 .content a.inline-link:hover::after {
   width: 100%;
 }
 
+/* ── Lists (dash style) ────────────────────────────── */
+
+.content > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+
+.content > ul li {
+  position: relative;
+  padding-left: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.content > ul li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+}
+
+/* ── Papers ─────────────────────────────────────────── */
+
 .papers {
   margin-top: 2em;
 }
+
 .paper {
   margin: 0 0 1em;
 }
+
 .paper-title {
   margin: 0;
   color: #481ac2;
   text-decoration: none;
   font-weight: 200;
   position: relative;
-  display: inline-block;
+  display: inline;
 }
+
 .paper-title::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -3px;
   width: 0;
-  height: 8px;
+  height: 6px;
   background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: width 0.2s ease;
 }
+
 .paper-title:hover::after {
   width: 100%;
 }
+
 .paper-meta {
   font-style: italic;
   color: #333;
 }
 
-/* Replace list bullets with dashes for all content lists */
-.content > ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1em;
-}
-.content > ul li {
-  position: relative;
-  padding-left: 1em;
-  margin-bottom: 0.5em;
-}
-.content > ul li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-}
+/* ── Section titles (published / in progress) ────── */
 
-/* Section headings (published / in progress) styling */
 .section-title {
-  font-size: 1em;              /* same as body text */
-  font-weight: 500;            /* slightly less bold */
+  font-size: 1em;
+  font-weight: 500;
   color: #000;
   text-transform: none;
-  margin-top: 0.75em;          /* less space above */
-  margin-bottom: 0.5em;       /* more space below */
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
   position: relative;
   display: inline-block;
 }
+
 .section-title .swoosh {
   position: absolute;
   bottom: -4px;
@@ -212,24 +252,65 @@ body {
   width: 100%;
   height: 12px;
 }
+
 .section-title .swoosh path {
-  stroke: #3cceaf;             /* aqua accent */
+  stroke: #3cceaf;
   stroke-width: 3;
   fill: none;
 }
 
-/* Align first content block across pages */
+/* ── Spacing helpers ────────────────────────────────── */
+
 .content > section:first-of-type,
 .content > p:first-of-type {
   margin-top: 0;
 }
 
-/* Remove extra gap after floated profile image on About */
 .profile + p {
   margin-top: 0;
 }
 
-/* Reset section-title top margin when it's the first element in .papers */
 .papers > .section-title:first-of-type {
   margin-top: 0;
+}
+
+/* ── Desktop (≥ 640px) ──────────────────────────────── */
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .inner {
+    padding: 40px 40px 60px;
+  }
+
+  .content h1 {
+    font-size: 2.5em;
+  }
+
+  .content h1 .swoosh {
+    bottom: -8px;
+    height: 20px;
+  }
+
+  .content nav ul {
+    flex-wrap: nowrap;
+    gap: 2.25em;
+  }
+
+  .content nav ul li a {
+    font-size: 1.125em;
+  }
+
+  .profile {
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 0 0 1em 1.25em;
+    shape-outside: circle(50%);
+    -webkit-shape-outside: circle(50%);
+    transform: scale(0.95);
+    transform-origin: center;
+  }
 }
