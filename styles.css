@@ -92,7 +92,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-size: 2em 6px;
+  background-size: 100% 6px;
 }
 
 nav ul li.active a {
@@ -126,7 +126,7 @@ a.inline-link {
 }
 
 a.inline-link:hover {
-  background-size: 1.5em 5px;
+  background-size: 100% 5px;
 }
 
 /* ── Dash lists ── */
@@ -171,7 +171,7 @@ ul.dash li::before {
 }
 
 .paper a:hover {
-  background-size: 1.5em 5px;
+  background-size: 100% 5px;
 }
 
 .paper .meta {
