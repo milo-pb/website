@@ -159,8 +159,11 @@ ul.dash li::before {
 }
 
 .paper .meta {
-  font-style: italic;
   color: #333;
+}
+
+.paper .venue {
+  font-style: italic;
 }
 
 /* ── Section titles ── */
