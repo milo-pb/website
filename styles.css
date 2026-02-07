@@ -162,10 +162,6 @@ ul.dash li::before {
   color: #333;
 }
 
-.paper .venue {
-  font-style: italic;
-}
-
 /* ── Section titles ── */
 
 .section-title {
