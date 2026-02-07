@@ -117,14 +117,7 @@ body {
 /* ── Profile image ──────────────────────────────────── */
 
 .profile {
-  float: right;
-  width: 120px;
-  height: 120px;
-  margin: 0 0 0.75em 0.75em;
-  border-radius: 50%;
-  object-fit: cover;
-  shape-outside: circle(50%);
-  -webkit-shape-outside: circle(50%);
+  display: none;
 }
 
 /* ── Inline links ───────────────────────────────────── */
@@ -255,8 +248,14 @@ body {
   }
 
   .profile {
+    display: block;
+    float: right;
     width: 200px;
     height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    shape-outside: circle(50%);
+    -webkit-shape-outside: circle(50%);
     margin: 0 0 1em 1.25em;
     transform: scale(0.95);
     transform-origin: center;
