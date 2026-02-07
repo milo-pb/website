@@ -54,7 +54,7 @@ body {
 }
 
 .content {
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* ── Heading ────────────────────────────────────────── */
