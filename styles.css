@@ -70,8 +70,7 @@ h1 .swoosh path {
 
 nav ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35em 0.9em;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0 0 1.5em;
@@ -80,7 +79,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #481ac2;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 400;
   text-transform: lowercase;
   white-space: nowrap;
@@ -212,13 +211,8 @@ ul.dash li::before {
     height: 20px;
   }
 
-  nav ul {
-    flex-wrap: nowrap;
-    gap: 2.25em;
-  }
-
   nav ul li a {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .profile {
