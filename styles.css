@@ -88,7 +88,7 @@ body {
 
 .content nav ul {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 0.4em 0.75em;
   list-style: none;
   padding: 0;
@@ -240,6 +240,7 @@ body {
   }
 
   .content nav ul {
+    flex-wrap: nowrap;
     gap: 2.25em;
   }
 
