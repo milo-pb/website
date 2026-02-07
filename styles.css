@@ -84,10 +84,15 @@ nav ul li a {
   font-weight: 400;
   text-transform: lowercase;
   white-space: nowrap;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 0 6px;
+  padding-bottom: 4px;
 }
 
 nav ul li a:hover {
-  text-decoration: underline wavy;
+  background-size: 2em 6px;
 }
 
 nav ul li.active a {
@@ -113,10 +118,15 @@ p {
 a.inline-link {
   color: #481ac2;
   text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 0 5px;
+  padding-bottom: 3px;
 }
 
 a.inline-link:hover {
-  text-decoration: underline wavy;
+  background-size: 1.5em 5px;
 }
 
 /* ── Dash lists ── */
@@ -153,10 +163,15 @@ ul.dash li::before {
   color: #481ac2;
   text-decoration: none;
   font-weight: 200;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 0 5px;
+  padding-bottom: 3px;
 }
 
 .paper a:hover {
-  text-decoration: underline wavy;
+  background-size: 1.5em 5px;
 }
 
 .paper .meta {
