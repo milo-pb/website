@@ -87,7 +87,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline wavy;
 }
 
 nav ul li.active a {
@@ -116,7 +116,7 @@ a.inline-link {
 }
 
 a.inline-link:hover {
-  text-decoration: underline;
+  text-decoration: underline wavy;
 }
 
 /* ── Dash lists ── */
@@ -156,7 +156,7 @@ ul.dash li::before {
 }
 
 .paper a:hover {
-  text-decoration: underline;
+  text-decoration: underline wavy;
 }
 
 .paper .meta {
