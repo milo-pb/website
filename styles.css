@@ -1,45 +1,33 @@
-/* styles.css – Milo Phillips-Brown site (mobile-first) */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 
-/* ── Reset & base ───────────────────────────────────── */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #fcfcfa;
+  background: #fcfcfa;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   color: #000;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Layout ─────────────────────────────────────────── */
+/* ── Card layout ── */
 
 .hero {
-  width: 100%;
   padding: 24px 0;
-  background-color: #fcfcfa;
 }
 
 .inner {
   width: 92%;
   max-width: 652px;
   margin: 0 auto;
-  background-color: #f0f2f7;
+  background: #f0f2f7;
   border-radius: 8px;
-  padding: 24px 20px 60px;
+  padding: 24px 20px 64px;
   position: relative;
-  overflow: hidden;
 }
 
-/* Wavy bottom edge */
 .inner::after {
   content: "";
   position: absolute;
@@ -47,29 +35,23 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M0,30 C50,10 150,50 200,30 L200,60 L0,60 Z' fill='%23fcfcfa'/></svg>");
-  background-repeat: no-repeat;
+  background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M0,30 C50,10 150,50 200,30 L200,60 L0,60 Z' fill='%23fcfcfa'/></svg>") no-repeat;
   background-size: 100% 100%;
   pointer-events: none;
 }
 
-.content {
-  overflow: hidden;
-}
+/* ── Name heading ── */
 
-/* ── Heading ────────────────────────────────────────── */
-
-.content h1 {
+h1 {
   font-size: 1.75em;
-  margin: 0 0 12px;
-  position: relative;
-  display: inline-block;
   font-weight: 200;
   line-height: 1.2;
-  color: #000;
+  margin: 0 0 12px;
+  display: inline-block;
+  position: relative;
 }
 
-.content h1 .swoosh {
+h1 .swoosh {
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -77,117 +59,123 @@ body {
   height: 16px;
 }
 
-.content h1 .swoosh path {
+h1 .swoosh path {
   fill: none;
   stroke: #3cceaf;
   stroke-width: 3;
   stroke-linecap: round;
 }
 
-/* ── Navigation ─────────────────────────────────────── */
+/* ── Navigation ── */
 
-.content nav ul {
+nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4em 0.75em;
+  gap: 0.35em 0.9em;
   list-style: none;
   padding: 0;
   margin: 0 0 1.5em;
 }
 
-.content nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: #481ac2;
   font-size: 0.8em;
-  text-transform: lowercase;
   font-weight: 400;
-  display: inline-block;
+  text-transform: lowercase;
   white-space: nowrap;
 }
 
-.content nav ul li:not(.active) a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Active nav item */
-.content nav ul li.active a {
+nav ul li.active a {
   color: #3cceaf;
+  pointer-events: none;
 }
 
-/* ── Profile image ──────────────────────────────────── */
+/* ── Profile image ── */
 
 .profile {
   display: none;
 }
 
-/* ── Inline links ───────────────────────────────────── */
+/* ── Body text ── */
 
-.content a.inline-link {
+p {
+  margin: 0 0 1em;
+  line-height: 1.6;
+}
+
+/* ── Inline links ── */
+
+a.inline-link {
   color: #481ac2;
   text-decoration: none;
 }
 
-.content a.inline-link:hover {
+a.inline-link:hover {
   text-decoration: underline;
 }
 
-/* ── Lists (dash style) ────────────────────────────── */
+/* ── Dash lists ── */
 
-.content > ul {
+ul.dash {
   list-style: none;
-  padding-left: 0;
-  margin-bottom: 1em;
+  padding: 0;
+  margin: 0 0 1em;
 }
 
-.content > ul li {
-  position: relative;
+ul.dash li {
   padding-left: 1.25em;
   margin-bottom: 0.5em;
+  position: relative;
 }
 
-.content > ul li::before {
+ul.dash li::before {
   content: "\2013";
   position: absolute;
   left: 0;
 }
 
-/* ── Papers ─────────────────────────────────────────── */
+/* ── Papers ── */
 
 .papers {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .paper {
   margin: 0 0 1em;
 }
 
-.paper-title {
-  margin: 0;
+.paper a {
   color: #481ac2;
   text-decoration: none;
   font-weight: 200;
 }
 
-.paper-title:hover {
+.paper a:hover {
   text-decoration: underline;
 }
 
-.paper-meta {
+.paper .meta {
   font-style: italic;
   color: #333;
 }
 
-/* ── Section titles (published / in progress) ────── */
+/* ── Section titles ── */
 
 .section-title {
   font-size: 1em;
   font-weight: 500;
-  color: #000;
-  text-transform: none;
-  margin-top: 0.75em;
-  margin-bottom: 0.5em;
-  position: relative;
+  margin: 1.5em 0 0.5em;
   display: inline-block;
+  position: relative;
+}
+
+.section-title:first-child {
+  margin-top: 0;
 }
 
 .section-title .swoosh {
@@ -199,27 +187,12 @@ body {
 }
 
 .section-title .swoosh path {
+  fill: none;
   stroke: #3cceaf;
   stroke-width: 3;
-  fill: none;
 }
 
-/* ── Spacing helpers ────────────────────────────────── */
-
-.content > section:first-of-type,
-.content > p:first-of-type {
-  margin-top: 0;
-}
-
-.profile + p {
-  margin-top: 0;
-}
-
-.papers > .section-title:first-of-type {
-  margin-top: 0;
-}
-
-/* ── Desktop (≥ 640px) ──────────────────────────────── */
+/* ── Desktop (640px+) ── */
 
 @media (min-width: 640px) {
   .hero {
@@ -227,24 +200,24 @@ body {
   }
 
   .inner {
-    padding: 40px 40px 60px;
+    padding: 40px 40px 64px;
   }
 
-  .content h1 {
+  h1 {
     font-size: 2.5em;
   }
 
-  .content h1 .swoosh {
+  h1 .swoosh {
     bottom: -8px;
     height: 20px;
   }
 
-  .content nav ul {
+  nav ul {
     flex-wrap: nowrap;
     gap: 2.25em;
   }
 
-  .content nav ul li a {
+  nav ul li a {
     font-size: 1.125em;
   }
 
@@ -253,11 +226,11 @@ body {
     float: right;
     width: 200px;
     height: 200px;
+    margin: 0 0 1em 1.25em;
     border-radius: 50%;
     object-fit: cover;
     shape-outside: circle(50%);
     -webkit-shape-outside: circle(50%);
-    margin: 0 0 1em 1.25em;
     transform: scale(0.95);
     transform-origin: center;
   }
