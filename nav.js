@@ -1,6 +1,6 @@
 const pages = [
   { slug: 'index.html',          label: 'about' },
-  { slug: 'tech-research.html',  label: 'ethics of tech' },
+  { slug: 'tech-research.html',  label: 'tech ethics' },
   { slug: 'other-research.html', label: 'mind & language' },
   { slug: 'pedagogy.html',       label: 'pedagogy' },
   { slug: 'cv',                  label: 'cv', href: 'https://www.dropbox.com/scl/fi/w5szza7jjnp6fuynu4edj/Phillips-Brown-CV.pdf?rlkey=mozv1xt1r52nxzilc5ks2z9rh&dl=0' },
