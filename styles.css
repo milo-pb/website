@@ -248,9 +248,4 @@ ul.dash li::before {
     transform: scale(0.95);
     transform-origin: center;
   }
-
-  .profile:hover {
-    transform: scale(0.95) rotate(360deg);
-    transition: transform 0.8s ease-in-out;
-  }
 }
