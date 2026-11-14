@@ -148,7 +148,7 @@ p {
 main a {
   color: #481ac2;
   text-decoration: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-opacity='0.4' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-opacity='0.2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: repeat-x;
   background-position: 0 100%;
   background-size: 100% 5px;
