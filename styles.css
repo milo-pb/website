@@ -1,4 +1,4 @@
-/* Poppins is loaded from <link> tags in each page's <head> (weights 200, 300, 400, and 300 italic). */
+/* Poppins is loaded from <link> tags in each page's <head> (weights 200, 400, and 200 italic). */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -7,8 +7,9 @@ body {
   padding: 0;
   background: #fcfcfa;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   color: #000;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── Card layout ── */
@@ -146,21 +147,17 @@ p {
 
 main a {
   color: #481ac2;
-  text-decoration: underline;
-  text-decoration-color: rgba(72, 26, 194, 0.4);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-opacity='0.4' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
   background-repeat: repeat-x;
   background-position: 0 100%;
-  background-size: 0 5px;
+  background-size: 100% 5px;
   padding-bottom: 3px;
 }
 
 main a:hover,
 main a:focus-visible {
-  text-decoration-color: transparent;
-  background-size: 100% 5px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%23481ac2' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
 }
 
 /* ── Dash lists ── */
@@ -208,7 +205,7 @@ ul.dash li::before {
 
 .section-title {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 200;
   font-style: italic;
   margin: 1.5em 0 0.5em;
   display: inline-block;
