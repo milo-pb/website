@@ -119,13 +119,10 @@ nav ul li a:focus-visible {
   background-size: 100% 6px;
 }
 
-/* Current page: body-coloured text with the teal swoosh, echoing the name above. */
-nav ul li a[aria-current="page"],
-nav ul li a[aria-current="page"]:hover,
-nav ul li a[aria-current="page"]:focus-visible {
-  color: #000;
-  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'><path d='M0,12 C40,2 160,18 200,12' stroke='%233cceaf' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
-  background-size: 100% 6px;
+/* Current page: teal text (the original design). */
+nav ul li a[aria-current="page"] {
+  color: #3cceaf;
+  pointer-events: none;
 }
 
 /* ── Profile image ── */
