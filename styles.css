@@ -262,7 +262,7 @@ ul.dash li::before {
     float: right;
     width: 146px;
     height: 146px;
-    margin: -34px 0 0 1.25em;
+    margin: -30px 0 0 1.25em;
     border-radius: 50%;
     object-fit: cover;
     shape-outside: circle(50%) border-box;
