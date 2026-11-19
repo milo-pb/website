@@ -255,15 +255,30 @@ ul.dash li::before {
     padding: 0.15em 0;
   }
 
+  /* Bullets on the left; the photo centred in the space between the end
+     of the bullet text and the card's right edge. */
+  .intro {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .intro .dash {
+    flex: 0 1 auto;
+  }
+
+  .intro .photo {
+    flex: 1 0 calc(146px + 2.5em);
+    display: flex;
+    justify-content: center;
+    margin-right: -40px;
+  }
+
   .profile {
     display: block;
-    float: right;
     width: 146px;
     height: 146px;
-    margin: -30px 0 0 1.25em;
+    margin-top: -30px;
     border-radius: 50%;
     object-fit: cover;
-    shape-outside: circle(50%) border-box;
-    shape-margin: 1em;
   }
 }
