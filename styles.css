@@ -260,12 +260,12 @@ ul.dash li::before {
   .profile {
     display: block;
     float: right;
-    width: 162px;
-    height: 162px;
-    margin: -20px 0 0 1.25em;
+    width: 146px;
+    height: 146px;
+    margin: -34px 0 0 1.25em;
     border-radius: 50%;
     object-fit: cover;
-    shape-outside: circle(50%);
-    -webkit-shape-outside: circle(50%);
+    shape-outside: circle(50%) border-box;
+    shape-margin: 1em;
   }
 }
